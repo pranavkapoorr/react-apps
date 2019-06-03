@@ -1,3 +1,26 @@
 body { 
     padding-top: 65px; 
 }
+
+section {
+    height: 100vh;
+}
+
+.about{
+}
+.parallax { 
+    /* The image used */
+    background-image: url("/assets/intro.jpg");
+  
+    /* Set a specific height */
+    height: 100vh; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
+ 
