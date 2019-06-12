@@ -1,8 +1,9 @@
 body { 
-    padding-top: 65px; 
+    
 }
 
 section {
+    padding-top: 65px; 
     height: 100vh;
 }
 
