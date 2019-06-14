@@ -9,6 +9,9 @@ const navItems = [
     },{
         title:"Timeline",
         class:"nav-link"
+    },{
+        title:"Accounts",
+        class:"nav-link"
     }
 ];
 
@@ -18,7 +21,7 @@ export default class Header extends Component {
     
         this.state = {
           navItems:navItems,
-          message:'not at bottom'
+          message:'intro'
         };
         this.handleScroll = this.handleScroll.bind(this);
       }
@@ -27,17 +30,26 @@ export default class Header extends Component {
         const windowHeight = "innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight;
         const body = document.body;
         const html = document.documentElement;
-        const docHeight = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight,  html.scrollHeight, html.offsetHeight);
+        const docHeight = html.clientHeight;//Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight,  html.scrollHeight, html.offsetHeight);
         const windowBottom = windowHeight + window.pageYOffset;
-        if (windowBottom >= docHeight) {
-          this.setState({
-            message:'bottom reached'
-          });
-        } else {
-          this.setState({
-            message:'not at bottom'
-          });
-        }
+        if (windowBottom >= docHeight*3) {
+            this.setState({
+              message:'introxxx'
+            });
+          }
+         else if (windowBottom >= docHeight*2) {
+            this.setState({
+              message:'timeline'
+            });
+          } else if (windowBottom > docHeight) {
+            this.setState({
+              message:'about'
+            });
+          }else{
+            this.setState({
+                message:'intro'
+              });
+          }
       }
     
       componentDidMount() {
@@ -78,7 +90,7 @@ export default class Header extends Component {
                         )
                     }
                     <li className="nav-item" >
-                                <a className="nav-link active">{this.state.message}</a>
+                                <a href="/" className="nav-link active">{this.state.message}</a>
                             </li>
                     
                     </ul>
