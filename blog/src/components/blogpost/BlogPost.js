@@ -1,11 +1,7 @@
-import React, { Component } from 'react'
-
-export default class BlogPost extends Component {
-    render() {
-        return (
-            <div>
-                BlogPost
-            </div>
-        )
+export default class BlogPost {
+    constructor(image,title,description){
+        this.image = image;
+        this.title = title;
+        this.description = description;
     }
 }

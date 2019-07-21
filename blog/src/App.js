@@ -1,5 +1,5 @@
 import React from 'react';
-import BlogPost from './components/blogpost/BlogPost';
+import BlogPost from './components/blogpost/BlogPosts';
 import MyAppBar from './components/appbar/MyAppBar';
 import MainArea from './components/mainarea/MainArea';
 
