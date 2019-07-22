@@ -17,7 +17,7 @@ const itemStyles = {
 export default class BlogPostItem extends Component {
     render() {
         return (
-            <Grid item  xs={12} sm={6} md={4}>
+            <Grid item  xs={12} sm={12} style={{margin:'1rem 0'}}>
                 <Card style={itemStyles.card}>
                   <CardMedia style={itemStyles.cardMedia}
                     image={this.props.post.image}
@@ -33,10 +33,7 @@ export default class BlogPostItem extends Component {
                   </CardContent>
                   <CardActions>
                     <Button size="small" color="primary">
-                      View
-                    </Button>
-                    <Button size="small" color="primary">
-                      Edit
+                      continue reading.
                     </Button>
                   </CardActions>
                 </Card>

@@ -23,10 +23,10 @@ export default class BlogPosts extends Component {
             <div>
                 
                 <Container style={postsAreaStyle} maxWidth="md">
-                <Typography variant="h5" component="h2">
+                <Typography variant="h4" component="h2">
                 Blog Posts
                 </Typography>
-                <Grid container spacing={4}>
+                <Grid container spacing={1}>
                 {
                     posts.map( p => <BlogPostItem key={p} post={p} />)
                     
