@@ -1,0 +1,36 @@
+:root{
+    --myBg: linear-gradient(to right, #2abcff,#2abcff,#89d1f3, rgba(255, 255, 255, 0.9),rgba(255, 255, 255, 0.9));
+}
+*,*::before,*::after {
+    box-sizing: border-box
+}
+a{
+    text-decoration: none
+}
+nav {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    text-align: center;
+    background: var(--myBg)
+}
+.logo{
+    display: block;
+    width: 100%;
+    align-self:center;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+ul {
+    list-style: none;
+    display: block;
+    width: 100%;
+    align-self:center;
+    margin: 0;
+    padding: 5px;
+}
+li{
+    display: inline;
+    margin: 0 10px;
+    font-weight: 500
+}

@@ -1,0 +1,11 @@
+*,*::before,*::after {
+    box-sizing: border-box
+}
+.todo{
+    margin: 5px 0;
+    display: block;
+    background: rgba(75, 156, 180, 0.133);
+}
+.completed {
+    text-decoration: line-through
+}
