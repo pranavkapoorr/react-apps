@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './Todos.css';
-import Todo from './todo/Todo';
+import TodoItem from './todo/TodoItem';
 export class Todos extends Component {
     state = {
         loading: true,
@@ -17,6 +17,21 @@ export class Todos extends Component {
         })})
         .catch(err => console.error(err))
     }
+    deleteTodo = (id) => {
+        this.setState({
+            todos: [...this.state.todos.filter((todo) => todo.id !== id)]
+        })
+    }
+    changeCompleted = (id) => {
+        this.setState({
+			todos: this.state.todos.map((todo) => {
+				if (todo.id === id) {
+					todo.completed = !todo.completed;
+				}
+				return todo;
+			})
+		});
+    }
     render() {
         return (
             <div className="todos">
@@ -26,9 +41,9 @@ export class Todos extends Component {
     }
     myTodos(){
         return this.state.todos.map((todo) =>
-           <Todo key={todo.id} todo={todo} />
+           <TodoItem key={todo.id} todo={todo} changeCompleted={this.changeCompleted} deleteTodo={this.deleteTodo}/>
            );
     }
-} 
+}
 
-export default Todos
+export default Todos;
